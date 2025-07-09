@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEAS 스마트과학관 전시관 도면 관리</title>
+    <link href="./css/reset.css" rel="stylesheet">
+    <link href="./css/common.css" rel="stylesheet">
+    <link href="./css/styles.css" rel="stylesheet">
+
+    <script type="text/javascript" src="./js/all.min.js"></script> <!--fontawesome-5.15.4-->
+    <script type="text/javascript" src="./js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="./js/navigation.js"></script>
+    <script type="text/javascript" src="./js/custom.js"></script>
+</head>
+<body class="clearfix">
+    <header>
+        <div id="header">
+            <h1 class="logo">스마트과학관</h1>
+            <div class="gnb">
+                <ul class="menu">
+                    <li class="home"><a href="index.html" title="대시보드 메인으로 이동"><i class="fas fa-home"></i><span>대시보드</span></a></li>
+                    <li class="manage active">
+                        <a href="ManageDrawing.html" title="전시관 관리 페이지로 이동"><i class="far fa-edit"></i><span>전시관 관리</span></a>
+                        <ul class="submenu">
+                            <li class="active"><a href="ManageDrawing.html" title="전시관 도면 관리 페이지로 이동">전시관 도면 관리</a></li>
+                            <li><a href="ManageInfo.html" title="전시관 정보 관리 페이지로 이동">전시관 정보 관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="event"><a href="Event.html" title="이벤트 페이지로 이동"><i class="fas fa-gift"></i><span>이벤트</span></a></li>
+                </ul>
+            </div>
+            <a href="#" class="m-open" title="모바일 메뉴 열기"></a>
+            <a href="#" class="m-close" title="모바일 메뉴 닫기"></a>
+        </div>
+        <div class="gnb mobileMenu">
+            <nav id="subNav">
+                <div class="user">
+                    <ul class="clearfix">
+                        <li><i class="fas fa-user"></i>김홍삼님</li>
+                        <li><a href="#" title="로그아웃하기"><i class="fas fa-unlock"></i>로그아웃</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <ul class="menu">
+                <li class="home"><a href="index.html" title="대시보드 메인으로 이동"><i class="fas fa-home"></i><span>대시보드</span></a></li>
+                <li class="manage active">
+                    <a href="ManageDrawing.html" title="전시관 관리 페이지로 이동"><i class="far fa-edit"></i><span>전시관 관리</span></a>
+                    <ul class="submenu">
+                        <li class="active"><a href="ManageDrawing.html" title="전시관 도면 관리 페이지로 이동">전시관 도면 관리</a></li>
+                        <li><a href="ManageInfo.html" title="전시관 정보 관리 페이지로 이동">전시관 정보 관리</a></li>
+                    </ul>
+                </li>
+                <li class="event"><a href="Event.html" title="이벤트 페이지로 이동"><i class="fas fa-gift"></i><span>이벤트</span></a></li>
+            </ul>
+        </div>
+        <div class="bg-shadow"></div>
+    </header>
+    <div id="container">
+        <nav id="subNav" class="clearfix">
+            <div class="place">
+                <i class="far fa-edit"></i>전시관 관리
+                <span><i class="fas fa-angle-right"></i>전시관 도면 관리</span>
+            </div>
+            <div class="user">
+                <ul class="clearfix">
+                    <li><i class="fas fa-user"></i>김홍삼님</li>
+                    <li><a href="#" title="로그아웃하기"><i class="fas fa-unlock"></i>로그아웃</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!--content 시작-->
+        <div class="content ManageDrawing_write WRITEFORM">
+            <div class="pageHead">
+                <h1 class="tit">새 도면 등록</h1>
+                <div class="Head-group">
+                    <button class="btn btn-gray" onclick="location.href='ManageDrawing.html'">취소</button>
+                    <button class="btn btn-blue" onclick="location.href='ManageDrawing.html'">등록</button>
+                </div>
+            </div>
+            <div class="rowgroup clearfix">
+                <div class="Form1 Form">
+                    <div class="thumb emptyimg"><!-- 하위 img태그 없애면 빈 이미지 노출.. 파일 추가시 이 곳에 img태그가 추가되어야 합니다.-->
+                        
+                    </div>
+                    <div>
+                        <h4>도면업로드</h4>
+                        <div class="filebox">
+                            <input class="upload-name" value="업로드할 파일을 선택하세요." placeholder="업로드할 파일을 선택하세요.">
+                            <label for="file">파일찾기</label>
+                            <input type="file" id="file">
+                        </div>
+                        <p class="caution">jpg, png, gif 확장자 파일만 업로드 가능합니다.</p>
+                    </div>
+                    <div>
+                        <h3>전시관 정보 입력</h3>
+                        <dl class="input-group">
+                            <dt>구분</dt>
+                            <dd class="fix-width">
+                                <input type="text" placeholder="층 수/구분 관을 입력하세요.">
+                            </dd>
+                        </dl>
+                        <dl class="input-group">
+                            <dt>영문 구분</dt>
+                            <dd class="fix-width">
+                                <input type="text" placeholder="영문 층 수/구분 관을 입력하세요.">
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="text-right">
+                        <button class="btn btn-blue">반영</button>
+                    </div>
+                </div>
+                <div class="Form Form2">
+                    <div>
+                        <h3>내부 전시관 등록</h3>
+                        <div class="input2">
+                            <dl class="input-group">
+                                <dt>전시관 이름</dt>
+                                <dd>
+                                    <input type="text" placeholder="전시관 이름을 입력하세요.">
+                                </dd>
+                            </dl>
+                            <dl class="input-group">
+                                <dt>번호/순서</dt>
+                                <dd>
+                                    <input type="num" placeholder="번호/순서를 입력하세요.">
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="input3">
+                            <p class="title">전시관 포인트 좌표<span>(도면 위를 클릭해 주세요.)</span></p>
+                            <dl class="input-group">
+                                <dt>X축</dt>
+                                <dd>
+                                    <input type="num" placeholder="예) 3, 147">
+                                </dd>
+                            </dl>
+                            <dl class="input-group">
+                                <dt>Y축</dt>
+                                <dd>
+                                    <input type="num" placeholder="예) 450, 320">
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-green">등록하기</button>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>내부 전시관 등록현황</h4>
+                        <ul class="ListExhibition">
+                            <li class="edit">
+                                <div class="info">
+                                    <span class="num">1</span>
+                                    <span class="txt">고래와 바다이야기</span>
+                                </div>
+                                <ul class="perform">
+                                    <li><a href="#" title="수정하기">수정<span class="edit-btn"><i class="fas fa-pen"></i></span></a></li>
+                                    <li><a href="#" title="삭제하기">삭제<span class="del-btn"><i class="fas fa-times"></i></span></a></li>
+                                </ul>
+                            </li>
+                            <li class="edit">
+                                <div class="info">
+                                    <span class="num">2</span>
+                                    <span class="txt">고래와 바다이야기</span>
+                                </div>
+                                <ul class="perform">
+                                    <li><a href="#" title="수정하기">수정<span class="edit-btn"><i class="fas fa-pen"></i></span></a></li>
+                                    <li><a href="#" title="삭제하기">삭제<span class="del-btn"><i class="fas fa-times"></i></span></a></li>
+                                </ul>
+                            </li>
+                            <li class="edit">
+                                <div class="info">
+                                    <span class="num">3</span>
+                                    <span class="txt">수산생물의 진화로 보는 바다의 시간</span>
+                                </div>
+                                <ul class="perform">
+                                    <li><a href="#" title="수정하기">수정<span class="edit-btn"><i class="fas fa-pen"></i></span></a></li>
+                                    <li><a href="#" title="삭제하기">삭제<span class="del-btn"><i class="fas fa-times"></i></span></a></li>
+                                </ul>
+                            </li>
+                            <li class="edit">
+                                <div class="info">
+                                    <span class="num">4</span>
+                                    <span class="txt">우리나라 수산생물</span>
+                                </div>
+                                <ul class="perform">
+                                    <li><a href="#" title="수정하기">수정<span class="edit-btn"><i class="fas fa-pen"></i></span></a></li>
+                                    <li><a href="#" title="삭제하기">삭제<span class="del-btn"><i class="fas fa-times"></i></span></a></li>
+                                </ul>
+                            </li>
+                            <li class="edit">
+                                <div class="info">
+                                    <span class="num">5</span>
+                                    <span class="txt">수족관</span>
+                                </div>
+                                <ul class="perform">
+                                    <li><a href="#" title="수정하기">수정<span class="edit-btn"><i class="fas fa-pen"></i></span></a></li>
+                                    <li><a href="#" title="삭제하기">삭제<span class="del-btn"><i class="fas fa-times"></i></span></a></li>
+                                </ul>
+                            </li>
+                            <li class="edit">
+                                <div class="info">
+                                    <span class="num">6</span>
+                                    <span class="txt">참여의 장</span>
+                                </div>
+                                <ul class="perform">
+                                    <li><a href="#" title="수정하기">수정<span class="edit-btn"><i class="fas fa-pen"></i></span></a></li>
+                                    <li><a href="#" title="삭제하기">삭제<span class="del-btn"><i class="fas fa-times"></i></span></a></li>
+                                </ul>
+                            </li>
+                            <li class="edit">
+                                <div class="info">
+                                    <span class="num">7</span>
+                                    <span class="txt">돔영상관</span>
+                                </div>
+                                <ul class="perform">
+                                    <li><a href="#" title="수정하기">수정<span class="edit-btn"><i class="fas fa-pen"></i></span></a></li>
+                                    <li><a href="#" title="삭제하기">삭제<span class="del-btn"><i class="fas fa-times"></i></span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--//content-->
+    </div>
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEAS 스마트과학관</title>
+    <link href="./css/reset.css" rel="stylesheet">
+    <link href="./css/common.css" rel="stylesheet">
+    <link href="./css/styles.css" rel="stylesheet">
+    <link href="./css/datepicker.min.css" rel="stylesheet">
+    <link href="./css/datepicker-custom.css" rel="stylesheet">
+
+    <script type="text/javascript" src="./js/all.min.js"></script> <!--fontawesome-5.15.4-->
+    <script type="text/javascript" src="./js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="./js/navigation.js"></script>
+    <script type="text/javascript" src="./js/custom.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['line']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('number', '시간(시)');
+        data.addColumn('number', '관람객 수');
+
+        data.addRows([
+            [9,  10],
+            [10,  50],
+            [11,  70],
+            [12,  90],
+            [13,  5],
+            [14,  70],
+            [15,  128],
+            [16,  135],
+            [17,  105],
+            [18,  12]
+        ]);
+
+        var options = {
+            width: '100%',
+            height: 280,
+            legend : 
+                {
+                    position : 'none'
+                },
+            Axis: {
+                viewWindow: {
+                    min: 9,
+                    max: 18
+                }
+            },
+            series: {
+                0: {color: '#6219FF'}
+            }
+        };
+
+        var chart = new google.charts.Line(document.getElementById('linechart_material'));
+        chart.draw(data, google.charts.Line.convertOptions(options));
+        }
+    </script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+  
+        function drawChart() {
+  
+          var data = google.visualization.arrayToDataTable([
+            ['연령별 방문 집계', ''],
+            ['10대',     110],
+            ['20대',      20],
+            ['30대',  40],
+            ['40대', 50],
+            ['50대 이상',    55]
+          ]);
+  
+          var options = {
+            width: '100%',
+            height: '280',
+            legend : 
+            {
+                align : 'top'
+            },
+            colors: ['#5634AD', '#06C273', '#F0D101', '#FA372D', '#0C85FA'],
+            fontSize: 14
+            //title: 'My Daily Activities'
+          };
+  
+          var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  
+          chart.draw(data, options);
+        }
+    </script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+  
+        function drawChart() {
+  
+          var data = google.visualization.arrayToDataTable([
+            ['성별 방문 집계', ''],
+            ['여성',     152],
+            ['남성',      89]
+          ]);
+  
+          var options = {
+            width: '100%',
+            height: '280',
+            legend : 
+            {
+                align : 'top'
+            },
+            colors: ['#FF5E7B', '#0C85FA'],
+            fontSize: 14
+            //title: 'My Daily Activities'
+          };
+  
+          var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
+  
+          chart.draw(data, options);
+        }
+    </script>
+    <script type="text/javascript" src="./js/datepicker.js"></script>
+    <script type="text/javascript" src="./js/datepicker.ko.js"></script>
+</head>
+<body class="clearfix">
+    <header>
+        <div id="header">
+            <h1 class="logo">스마트과학관</h1>
+            <div class="gnb">
+                <ul class="menu">
+                    <li class="home active"><a href="#" title="대시보드 메인으로 이동"><i class="fas fa-home"></i><span>대시보드</span></a></li>
+                    <li class="manage">
+                        <a href="ManageDrawing.html" title="전시관 관리 페이지로 이동"><i class="far fa-edit"></i><span>전시관 관리</span></a>
+                        <ul class="submenu">
+                            <li><a href="ManageDrawing.html" title="전시관 도면 관리 페이지로 이동">전시관 도면 관리</a></li>
+                            <li><a href="ManageInfo.html" title="전시관 정보 관리 페이지로 이동">전시관 정보 관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="event"><a href="Event.html" title="이벤트 페이지로 이동"><i class="fas fa-gift"></i><span>이벤트</span></a></li>
+                </ul>
+            </div>
+            <a href="#" class="m-open" title="모바일 메뉴 열기"></a>
+            <a href="#" class="m-close" title="모바일 메뉴 닫기"></a>
+        </div>
+        <div class="gnb mobileMenu">
+            <nav id="subNav">
+                <div class="user">
+                    <ul class="clearfix">
+                        <li><i class="fas fa-user"></i>김홍삼님</li>
+                        <li><a href="#" title="로그아웃하기"><i class="fas fa-unlock"></i>로그아웃</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <ul class="menu">
+                <li class="home active"><a href="#" title="대시보드 메인으로 이동"><i class="fas fa-home"></i><span>대시보드</span></a></li>
+                <li class="manage">
+                    <a href="ManageDrawing.html" title="전시관 관리 페이지로 이동"><i class="far fa-edit"></i><span>전시관 관리</span></a>
+                    <ul class="submenu">
+                        <li><a href="ManageDrawing.html" title="전시관 도면 관리 페이지로 이동">전시관 도면 관리</a></li>
+                        <li><a href="ManageInfo.html" title="전시관 정보 관리 페이지로 이동">전시관 정보 관리</a></li>
+                    </ul>
+                </li>
+                <li class="event"><a href="Event.html" title="이벤트 페이지로 이동"><i class="fas fa-gift"></i><span>이벤트</span></a></li>
+            </ul>
+        </div>
+        <div class="bg-shadow"></div>
+    </header>
+    <div id="container">
+        <nav id="subNav" class="clearfix">
+            <div class="place"><i class="fas fa-home"></i>대시보드</div>
+            <div class="user">
+                <ul class="clearfix">
+                    <li><i class="fas fa-user"></i>김홍삼님</li>
+                    <li><a href="#" title="로그아웃하기"><i class="fas fa-unlock"></i>로그아웃</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="content dashboard">
+            <div class="rowgroup clearfix">
+                <!--방문객 이동 경로-->
+                <div class="cont01">
+                    <div class="cont-head clearfix">
+                        <h2 class="tit">방문객 이동 경로</h2>
+                        <div class="select">
+                            <a href="#">1층</a>
+                            <ul class="select-btn">
+                                <li class="on">1층</li>
+                                <li>2층</li>
+                                <li>지하1층</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="cont-body">
+                        <div><img src="./img/sub/dashboard_img01.png"></div>
+                    </div>
+                </div>
+                <!--달력-->
+                <div class="cont02">
+                    <div class="cont-head clearfix">
+                        <div id="datepicker"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="rowgroup clearfix">
+                <div class="cont03">
+                    <div class="cont-head">
+                        <h2>인기전시관</h2>
+                    </div>
+                    <div class="cont-body">
+                        <div class="table-wrap">
+                            <table class="table-detail">
+                                <colgroup>
+                                    <col width="15%">
+                                    <col width="30%">
+                                    <col width="*">
+                                    <col width="30%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>순위</th>
+                                        <th>전시관</th>
+                                        <th>연령</th>
+                                        <th>누적관람객</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>참여의 장</td>
+                                        <td>10대</td>
+                                        <td>3,880명</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>돔영상관</td>
+                                        <td>10대</td>
+                                        <td>3,580명</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>수족관</td>
+                                        <td>10대</td>
+                                        <td>3,380명</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>고래와 바다이야기</td>
+                                        <td>10대</td>
+                                        <td>3,180명</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>수산식품이용가공</td>
+                                        <td>10대</td>
+                                        <td>2,980명</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont04">
+                    <div class="cont-head">
+                        <h2>관람시간</h2>
+                    </div>
+                    <div class="cont-body">
+                        <div id="linechart_material"></div>
+                    </div>
+                </div>
+                <div class="cont05">
+                    <div class="cont-head clearfix">
+                        <h2 class="tit">Today</h2>
+                        <div class="select">
+                            <a href="#">전체</a>
+                            <ul>
+                                <li>전체</li>
+                                <li>연령별</li>
+                                <li>성별</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="cont-body">
+                        <div class="todayAll">
+                            <p>관람객</p>
+                            <div class="iconWrap">
+                                <i></i>
+                                <span>19<em>명</em></span>
+                            </div>
+                        </div>
+                        <div class="todayAge" style="display: none;">
+                            <div id="piechart" style="width: 100%; height: auto"></div>
+                        </div>
+                        <div class="todayGender" style="display: none;">
+                            <div id="piechart2" style="width: 100%; height: auto"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $('#datepicker').datepicker({
+        language: 'ko'
+    });
+</script>
+</html>

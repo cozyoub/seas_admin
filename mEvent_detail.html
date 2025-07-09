@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEAS 스마트과학관 이벤트</title>
+    <link href="./css/reset.css" rel="stylesheet">
+    <link href="./css/common.css" rel="stylesheet">
+    <link href="./css/styles.css" rel="stylesheet">
+    <link href="./css/datepicker.min.css" rel="stylesheet">
+    <!--<link href="./css/datepicker-custom.css" rel="stylesheet">-->
+
+    <script type="text/javascript" src="./js/all.min.js"></script> <!--fontawesome-5.15.4-->
+    <script type="text/javascript" src="./js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="./js/navigation.js"></script>
+    <script type="text/javascript" src="./js/custom.js"></script>
+    <script type="text/javascript" src="./js/datepicker.js"></script>
+    <script type="text/javascript" src="./js/datepicker.ko.js"></script>
+</head>
+<body class="clearfix">
+    <header>
+        <div id="header">
+            <h1 class="logo">스마트과학관</h1>
+            <div class="gnb">
+                <ul class="menu">
+                    <li class="home"><a href="index.html" title="대시보드 메인으로 이동"><i class="fas fa-home"></i><span>대시보드</span></a></li>
+                    <li class="manage">
+                        <a href="ManageDrawing.html" title="전시관 관리 페이지로 이동"><i class="far fa-edit"></i><span>전시관 관리</span></a>
+                        <ul class="submenu">
+                            <li><a href="ManageDrawing.html" title="전시관 도면 관리 페이지로 이동">전시관 도면 관리</a></li>
+                            <li><a href="ManageInfo.html" title="전시관 정보 관리 페이지로 이동">전시관 정보 관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="event active"><a href="Event.html" title="이벤트 페이지로 이동"><i class="fas fa-gift"></i><span>이벤트</span></a></li>
+                </ul>
+            </div>
+            <a href="#" class="m-open" title="모바일 메뉴 열기"></a>
+            <a href="#" class="m-close" title="모바일 메뉴 닫기"></a>
+        </div>
+        <div class="gnb mobileMenu">
+            <nav id="subNav">
+                <div class="user">
+                    <ul class="clearfix">
+                        <li><i class="fas fa-user"></i>김홍삼님</li>
+                        <li><a href="#" title="로그아웃하기"><i class="fas fa-unlock"></i>로그아웃</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <ul class="menu">
+                <li class="home"><a href="index.html" title="대시보드 메인으로 이동"><i class="fas fa-home"></i><span>대시보드</span></a></li>
+                <li class="manage">
+                    <a href="ManageDrawing.html" title="전시관 관리 페이지로 이동"><i class="far fa-edit"></i><span>전시관 관리</span></a>
+                    <ul class="submenu">
+                        <li><a href="ManageDrawing.html" title="전시관 도면 관리 페이지로 이동">전시관 도면 관리</a></li>
+                        <li><a href="ManageInfo.html" title="전시관 정보 관리 페이지로 이동">전시관 정보 관리</a></li>
+                    </ul>
+                </li>
+                <li class="event active"><a href="Event.html" title="이벤트 페이지로 이동"><i class="fas fa-gift"></i><span>이벤트</span></a></li>
+            </ul>
+        </div>
+        <div class="bg-shadow"></div>
+    </header>
+    <div id="container">
+        <nav id="subNav" class="clearfix">
+            <div class="place">
+                <i class="fas fa-gift"></i>이벤트
+            </div>
+            <div class="user">
+                <ul class="clearfix">
+                    <li><i class="fas fa-user"></i>김홍삼님</li>
+                    <li><a href="#" title="로그아웃하기"><i class="fas fa-unlock"></i>로그아웃</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!--content 시작-->
+        <div class="content mEvent_detail mEvent_write WRITEFORM">
+            <div class="pageHead">
+                <h1 class="tit">미션 이벤트 상세</h1>
+                <div class="Head-group">
+                    <button class="btn btn-blue" onclick="location.href='mEvent_write.html'">업데이트</button>
+                </div>
+            </div>
+            <div class="rowgroup clearfix">
+                <div class="Form1 Form">
+                    <div class="thumb emptyimg"><!-- 하위 img태그 없애면 빈 이미지 노출-->
+                        <img src="./img/sub/exhibition01.jpg" alt="전시관 이미지">
+                    </div>
+                </div>
+                <div class="Form Form2">
+                    <div class="input1">
+                        <dl class="input-group">
+                            <dt>이벤트 이름</dt>
+                            <dd class="fix-width">
+                                <p>고래와 바다이야기</p>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="input1">
+                        <dl class="input-group">
+                            <dt>구분</dt>
+                            <dd class="clearfix">
+                                <div class="select">
+                                    <a href="#">1층</a>
+                                    <ul>
+                                        <li>1층</li>
+                                        <li>2층</li>
+                                        <li>지하1층</li>
+                                    </ul>
+                                </div>
+                                <div class="select select_exhi">
+                                    <a href="#">고래와 바다 이야기</a>
+                                    <ul>
+                                        <li>고래와 바다이야기</li>
+                                        <li>수산생물의 진화로 보는 바다의 시간</li>
+                                        <li>우리나라 수산생물</li>
+                                        <li>수족관</li>
+                                        <li>참여의 장</li>
+                                        <li>돔영상관</li>
+                                    </ul>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="down-icon text-center">
+                        <span><i class="fas fa-angle-down"></i></span>
+                    </div>
+                    <div>
+                        <ul class="ListExhibition">
+                            <li class="edit">
+                                <div class="info">
+                                    <span class="num">1</span>
+                                    <span class="txt">고래와 바다이야기</span>
+                                </div>
+                            </li>
+                            <li class="edit">
+                                <div class="info">
+                                    <span class="num">2</span>
+                                    <span class="txt">고래와 바다이야기</span>
+                                </div>
+                            </li>
+                            <li class="edit">
+                                <div class="info">
+                                    <span class="num">3</span>
+                                    <span class="txt">수산생물의 진화로 보는 바다의 시간</span>
+                                </div>
+                            </li>
+                            <li class="edit">
+                                <div class="info">
+                                    <span class="num">4</span>
+                                    <span class="txt">우리나라 수산생물</span>
+                                </div>
+                            </li>
+                            <li class="edit">
+                                <div class="info">
+                                    <span class="num">5</span>
+                                    <span class="txt">수족관</span>
+                                </div>
+                            </li>
+                            <li class="edit">
+                                <div class="info">
+                                    <span class="num">6</span>
+                                    <span class="txt">참여의 장</span>
+                                </div>
+                            </li>
+                            <li class="edit">
+                                <div class="info">
+                                    <span class="num">7</span>
+                                    <span class="txt">돔영상관</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--//content-->
+    </div>
+</body>
+<script>
+    $('#datepicker1').datepicker({
+        language: 'ko'
+    });
+    $('#datepicker2').datepicker({
+        language: 'ko'
+    });
+</script>
+</html>

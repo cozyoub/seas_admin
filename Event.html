@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEAS 스마트과학관 이벤트</title>
+    <link href="./css/reset.css" rel="stylesheet">
+    <link href="./css/common.css" rel="stylesheet">
+    <link href="./css/styles.css" rel="stylesheet">
+
+    <script type="text/javascript" src="./js/all.min.js"></script> <!--fontawesome-5.15.4-->
+    <script type="text/javascript" src="./js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="./js/navigation.js"></script>
+    <script type="text/javascript" src="./js/custom.js"></script>
+</head>
+<body class="clearfix">
+    <header>
+        <div id="header">
+            <h1 class="logo">스마트과학관</h1>
+            <div class="gnb">
+                <ul class="menu">
+                    <li class="home"><a href="index.html" title="대시보드 메인으로 이동"><i class="fas fa-home"></i><span>대시보드</span></a></li>
+                    <li class="manage">
+                        <a href="ManageDrawing.html" title="전시관 관리 페이지로 이동"><i class="far fa-edit"></i><span>전시관 관리</span></a>
+                        <ul class="submenu">
+                            <li><a href="ManageDrawing.html" title="전시관 도면 관리 페이지로 이동">전시관 도면 관리</a></li>
+                            <li><a href="ManageInfo.html" title="전시관 정보 관리 페이지로 이동">전시관 정보 관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="event active"><a href="Event.html" title="이벤트 페이지로 이동"><i class="fas fa-gift"></i><span>이벤트</span></a></li>
+                </ul>
+            </div>
+            <a href="#" class="m-open" title="모바일 메뉴 열기"></a>
+            <a href="#" class="m-close" title="모바일 메뉴 닫기"></a>
+        </div>
+        <div class="gnb mobileMenu">
+            <nav id="subNav">
+                <div class="user">
+                    <ul class="clearfix">
+                        <li><i class="fas fa-user"></i>김홍삼님</li>
+                        <li><a href="#" title="로그아웃하기"><i class="fas fa-unlock"></i>로그아웃</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <ul class="menu">
+                <li class="home"><a href="index.html" title="대시보드 메인으로 이동"><i class="fas fa-home"></i><span>대시보드</span></a></li>
+                <li class="manage">
+                    <a href="ManageDrawing.html" title="전시관 관리 페이지로 이동"><i class="far fa-edit"></i><span>전시관 관리</span></a>
+                    <ul class="submenu">
+                        <li><a href="ManageDrawing.html" title="전시관 도면 관리 페이지로 이동">전시관 도면 관리</a></li>
+                        <li><a href="ManageInfo.html" title="전시관 정보 관리 페이지로 이동">전시관 정보 관리</a></li>
+                    </ul>
+                </li>
+                <li class="event active"><a href="Event.html" title="이벤트 페이지로 이동"><i class="fas fa-gift"></i><span>이벤트</span></a></li>
+            </ul>
+        </div>
+        <div class="bg-shadow"></div>
+    </header>
+    <div id="container">
+        <nav id="subNav" class="clearfix">
+            <div class="place">
+                <i class="fas fa-gift"></i>이벤트
+            </div>
+            <div class="user">
+                <ul class="clearfix">
+                    <li><i class="fas fa-user"></i>김홍삼님</li>
+                    <li><a href="#" title="로그아웃하기"><i class="fas fa-unlock"></i>로그아웃</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!--content 시작-->
+        <div class="content Event">
+            <div class="pageHead">
+                <h1 class="tit">이벤트</h1>
+                <div class="Head-group">
+                    <button class="btn btn-blue" onclick="location.href='mEvent_write.html'">미션 이벤트 등록<i class="fas fa-plus"></i></button>
+                    <button class="btn btn-blue" onclick="location.href='Event_write.html'">새 이벤트 등록<i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+            <ul id="tab-ul">
+                <li class="on">전체</li>
+                <li>미션 이벤트</li>
+                <li>이벤트</li>
+            </ul>
+            <div class="tab-cont clearfix">
+                <div class="all clearfix">
+                    <div class="img-cont">
+                        <a href="mEvent_detail.html">
+                            <div class="thumb">
+                                <img src="./img/sub/exhibition01.jpg" alt="전시관1">
+                            </div>
+                            <div class="text">
+                                <div class="detail">
+                                    <span class="division mission">미션이벤트</span>
+                                    <div class="title">
+                                        <span class="txt">고래와 바다이야기</span>
+                                    </div>
+                                    <div class="etcBtn">
+                                        <a href="#" class="more-btn"></a>
+                                        <ul class="etcGroup">
+                                            <li>삭제</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="img-cont">
+                        <a href="mEvent_detail.html">
+                            <div class="thumb">
+                                <img src="./img/sub/exhibition02.jpg" alt="전시관1">
+                            </div>
+                            <div class="text">
+                                <div class="detail">
+                                    <span class="division mission">미션이벤트</span>
+                                    <div class="title">
+                                        <span class="txt">고래와 바다이야기</span>
+                                    </div>
+                                    <div class="etcBtn">
+                                        <a href="#" class="more-btn"></a>
+                                        <ul class="etcGroup">
+                                            <li>삭제</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="img-cont">
+                        <a href="mEvent_detail.html">
+                            <div class="thumb">
+                                <img src="./img/sub/exhibition03.jpg" alt="전시관1">
+                            </div>
+                            <div class="text">
+                                <div class="detail">
+                                    <span class="division mission">미션이벤트</span>
+                                    <div class="title">
+                                        <span class="txt">수산물의 진화로 보는 바다의 시간</span>
+                                    </div>
+                                    <div class="etcBtn">
+                                        <a href="#" class="more-btn"></a>
+                                        <ul class="etcGroup">
+                                            <li>삭제</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="img-cont">
+                        <a href="Event_detail.html">
+                            <div class="thumb">
+                                <img src="./img/sub/event01.jpg" alt="전시관1">
+                            </div>
+                            <div class="text">
+                                <div class="detail">
+                                    <span class="division normal">이벤트</span>
+                                    <div class="title">
+                                        <span class="txt">[어린이날 이벤트] 「어린이날 100주년 기념 이벤트」</span>
+                                    </div>
+                                    <div class="etcBtn">
+                                        <a href="#" class="more-btn"></a>
+                                        <ul class="etcGroup">
+                                            <li>삭제</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="img-cont">
+                        <a href="Event_detail.html">
+                            <div class="thumb">
+                                <img src="./img/sub/event02.jpg" alt="전시관1">
+                            </div>
+                            <div class="text">
+                                <div class="detail">
+                                    <span class="division normal">이벤트</span>
+                                    <div class="title">
+                                        <span class="txt">업사이클 오징어 게임, 게임에 참가하시겠습니까?</span>
+                                    </div>
+                                    <div class="etcBtn">
+                                        <a href="#" class="more-btn"></a>
+                                        <ul class="etcGroup">
+                                            <li>삭제</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="img-cont">
+                        <a href="Event_detail.html">
+                            <div class="thumb">
+                                <img src="./img/sub/event03.jpg" alt="전시관1">
+                            </div>
+                            <div class="text">
+                                <div class="detail">
+                                    <span class="division normal">이벤트</span>
+                                    <div class="title">
+                                        <span class="txt">어린이날 기념 온-오프라인 이벤트</span>
+                                    </div>
+                                    <div class="etcBtn">
+                                        <a href="#" class="more-btn"></a>
+                                        <ul class="etcGroup">
+                                            <li>삭제</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="MISSION clearfix">
+                    <div class="img-cont">
+                        <a href="mEvent_detail.html">
+                            <div class="thumb">
+                                <img src="./img/sub/exhibition01.jpg" alt="전시관1">
+                            </div>
+                            <div class="text">
+                                <div class="detail">
+                                    <span class="division mission">미션이벤트</span>
+                                    <div class="title">
+                                        <span class="txt">고래와 바다이야기</span>
+                                    </div>
+                                    <div class="etcBtn">
+                                        <a href="#" class="more-btn"></a>
+                                        <ul class="etcGroup">
+                                            <li>삭제</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="img-cont">
+                        <a href="mEvent_detail.html">
+                            <div class="thumb">
+                                <img src="./img/sub/exhibition02.jpg" alt="전시관1">
+                            </div>
+                            <div class="text">
+                                <div class="detail">
+                                    <span class="division mission">미션이벤트</span>
+                                    <div class="title">
+                                        <span class="txt">고래와 바다이야기</span>
+                                    </div>
+                                    <div class="etcBtn">
+                                        <a href="#" class="more-btn"></a>
+                                        <ul class="etcGroup">
+                                            <li>삭제</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="img-cont">
+                        <a href="mEvent_detail.html">
+                            <div class="thumb">
+                                <img src="./img/sub/exhibition03.jpg" alt="전시관1">
+                            </div>
+                            <div class="text">
+                                <div class="detail">
+                                    <span class="division mission">미션이벤트</span>
+                                    <div class="title">
+                                        <span class="txt">수산물의 진화로 보는 바다의 시간</span>
+                                    </div>
+                                    <div class="etcBtn">
+                                        <a href="#" class="more-btn"></a>
+                                        <ul class="etcGroup">
+                                            <li>삭제</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="NORMAL clearfix">
+                    <div class="img-cont">
+                        <a href="Event_detail.html">
+                            <div class="thumb">
+                                <img src="./img/sub/event01.jpg" alt="전시관1">
+                            </div>
+                            <div class="text">
+                                <div class="detail">
+                                    <span class="division normal">이벤트</span>
+                                    <div class="title">
+                                        <span class="txt">[어린이날 이벤트] 「어린이날 100주년 기념 이벤트」</span>
+                                    </div>
+                                    <div class="etcBtn">
+                                        <a href="#" class="more-btn"></a>
+                                        <ul class="etcGroup">
+                                            <li>삭제</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="img-cont">
+                        <a href="Event_detail.html">
+                            <div class="thumb">
+                                <img src="./img/sub/event02.jpg" alt="전시관1">
+                            </div>
+                            <div class="text">
+                                <div class="detail">
+                                    <span class="division normal">이벤트</span>
+                                    <div class="title">
+                                        <span class="txt">업사이클 오징어 게임, 게임에 참가하시겠습니까?</span>
+                                    </div>
+                                    <div class="etcBtn">
+                                        <a href="#" class="more-btn"></a>
+                                        <ul class="etcGroup">
+                                            <li>삭제</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="img-cont">
+                        <a href="Event_detail.html">
+                            <div class="thumb">
+                                <img src="./img/sub/event03.jpg" alt="전시관1">
+                            </div>
+                            <div class="text">
+                                <div class="detail">
+                                    <span class="division normal">이벤트</span>
+                                    <div class="title">
+                                        <span class="txt">어린이날 기념 온-오프라인 이벤트</span>
+                                    </div>
+                                    <div class="etcBtn">
+                                        <a href="#" class="more-btn"></a>
+                                        <ul class="etcGroup">
+                                            <li>삭제</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="pagination">
+                <ul class="paging">
+                    <li class="first"><a href="#" title="첫 페이지로 이동"></a></li>
+                    <li class="prev"><a href="#" title="이전 페이지로 이동"></a></li>
+                    <li class="active"><a href="#" title="1페이지로 이동">1</a></li>
+                    <li><a href="#" title="2페이지로 이동">2</a></li>
+                    <li><a href="#" title="3페이지로 이동">3</a></li>
+                    <li><a href="#" title="4페이지로 이동">4</a></li>
+                    <li><a href="#" title="5페이지로 이동">5</a></li>
+                    <li class="next"><a href="#" title="다음 페이지로 이동"></a></li>
+                    <li class="last"><a href="#" title="끝 페이지로 이동"></a></li>
+                </ul>
+            </div>
+        </div>
+        <!--//content-->
+    </div>
+</body>
+</html>

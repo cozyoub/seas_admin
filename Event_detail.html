@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEAS 스마트과학관 이벤트</title>
+    <link href="./css/reset.css" rel="stylesheet">
+    <link href="./css/common.css" rel="stylesheet">
+    <link href="./css/styles.css" rel="stylesheet">
+    <link href="./css/datepicker.min.css" rel="stylesheet">
+    <!--<link href="./css/datepicker-custom.css" rel="stylesheet">-->
+
+    <script type="text/javascript" src="./js/all.min.js"></script> <!--fontawesome-5.15.4-->
+    <script type="text/javascript" src="./js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="./js/navigation.js"></script>
+    <script type="text/javascript" src="./js/custom.js"></script>
+    <script type="text/javascript" src="./js/datepicker.js"></script>
+    <script type="text/javascript" src="./js/datepicker.ko.js"></script>
+</head>
+<body class="clearfix">
+    <header>
+        <div id="header">
+            <h1 class="logo">스마트과학관</h1>
+            <div class="gnb">
+                <ul class="menu">
+                    <li class="home"><a href="index.html" title="대시보드 메인으로 이동"><i class="fas fa-home"></i><span>대시보드</span></a></li>
+                    <li class="manage">
+                        <a href="ManageDrawing.html" title="전시관 관리 페이지로 이동"><i class="far fa-edit"></i><span>전시관 관리</span></a>
+                        <ul class="submenu">
+                            <li><a href="ManageDrawing.html" title="전시관 도면 관리 페이지로 이동">전시관 도면 관리</a></li>
+                            <li><a href="ManageInfo.html" title="전시관 정보 관리 페이지로 이동">전시관 정보 관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="event active"><a href="Event.html" title="이벤트 페이지로 이동"><i class="fas fa-gift"></i><span>이벤트</span></a></li>
+                </ul>
+            </div>
+            <a href="#" class="m-open" title="모바일 메뉴 열기"></a>
+            <a href="#" class="m-close" title="모바일 메뉴 닫기"></a>
+        </div>
+        <div class="gnb mobileMenu">
+            <nav id="subNav">
+                <div class="user">
+                    <ul class="clearfix">
+                        <li><i class="fas fa-user"></i>김홍삼님</li>
+                        <li><a href="#" title="로그아웃하기"><i class="fas fa-unlock"></i>로그아웃</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <ul class="menu">
+                <li class="home"><a href="index.html" title="대시보드 메인으로 이동"><i class="fas fa-home"></i><span>대시보드</span></a></li>
+                <li class="manage">
+                    <a href="ManageDrawing.html" title="전시관 관리 페이지로 이동"><i class="far fa-edit"></i><span>전시관 관리</span></a>
+                    <ul class="submenu">
+                        <li><a href="ManageDrawing.html" title="전시관 도면 관리 페이지로 이동">전시관 도면 관리</a></li>
+                        <li><a href="ManageInfo.html" title="전시관 정보 관리 페이지로 이동">전시관 정보 관리</a></li>
+                    </ul>
+                </li>
+                <li class="event active"><a href="Event.html" title="이벤트 페이지로 이동"><i class="fas fa-gift"></i><span>이벤트</span></a></li>
+            </ul>
+        </div>
+        <div class="bg-shadow"></div>
+    </header>
+    <div id="container">
+        <nav id="subNav" class="clearfix">
+            <div class="place">
+                <i class="fas fa-gift"></i>이벤트
+            </div>
+            <div class="user">
+                <ul class="clearfix">
+                    <li><i class="fas fa-user"></i>김홍삼님</li>
+                    <li><a href="#" title="로그아웃하기"><i class="fas fa-unlock"></i>로그아웃</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!--content 시작-->
+        <div class="content Event_detail WRITEFORM">
+            <div class="pageHead">
+                <h1 class="tit">이벤트 상세</h1>
+                <div class="Head-group">
+                    <button class="btn btn-blue" onclick="location.href='Event_write.html'">업데이트</button>
+                </div>
+            </div>
+            <div class="rowgroup clearfix">
+                <div class="Form1 Form">
+                    <div class="thumb emptyimg"><!-- 하위 img태그 없애면 빈 이미지 노출-->
+                        <img src="./img/sub/event01.jpg" alt="전시관 이미지">
+                    </div>
+                </div>
+                <div class="Form Form2">
+                    <div class="input1">
+                        <dl class="input-group">
+                            <dt>이벤트 이름</dt>
+                            <dd class="fix-width">
+                                <p>Getbol! 2022 수산과학관 특별기획전</p>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="input1">
+                        <dl class="input-group">
+                            <dt>이벤트 기간</dt>
+                            <dd>
+                                <p>22. 04. 15(금) - 22. 06. 30(목)</p>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="input1 textarea">
+                        <dl class="input-group">
+                            <dt>상세 설명</dt>
+                            <dd>
+                                <p>
+                                    제 44차 유네스코 세계유산위원회에서 생물 다양성을 인정받아 세계 자연유산으로 등재된 우리나라 갯벌을 
+                                    홍보하고 갯벌이 주는 다양한 가치와 새롭게 주목받고 있는 탄소 흡수원으로서 역할을 알리는 기획 전시를 
+                                    마련하였습니다.
+
+                                    전시명 : 2022 수산과학관 특별기획전 ‘유네스코 세계 자연유선, Getbol!’ - 탄소, 갯벌에 빠지다-<br>
+                                    기간 : 2022. 04. 15(금) ~ 06. 30(목)<br>
+                                    전시내용<br>
+                                    인트로<br>
+                                    -1) 마중나온 갯벌<br>
+                                    -2) 미리보는 갯벌<br>
+                                    2. 본론<br>
+                                    -3) 한국의 갯벌<br>
+                                    -4) 갯벌의 중요성<br>
+                                    -5) 세계 자연유산 갯벌
+                                </p>
+                                <p>
+                                    제 44차 유네스코 세계유산위원회에서 생물 다양성을 인정받아 세계 자연유산으로 등재된 우리나라 갯벌을 
+                                    홍보하고 갯벌이 주는 다양한 가치와 새롭게 주목받고 있는 탄소 흡수원으로서 역할을 알리는 기획 전시를 
+                                    마련하였습니다.
+
+                                    전시명 : 2022 수산과학관 특별기획전 ‘유네스코 세계 자연유선, Getbol!’ - 탄소, 갯벌에 빠지다-<br>
+                                    기간 : 2022. 04. 15(금) ~ 06. 30(목)<br>
+                                    전시내용<br>
+                                    인트로<br>
+                                    -1) 마중나온 갯벌<br>
+                                    -2) 미리보는 갯벌<br>
+                                    2. 본론<br>
+                                    -3) 한국의 갯벌<br>
+                                    -4) 갯벌의 중요성<br>
+                                    -5) 세계 자연유산 갯벌
+                                </p>
+                                <p>
+                                    제 44차 유네스코 세계유산위원회에서 생물 다양성을 인정받아 세계 자연유산으로 등재된 우리나라 갯벌을 
+                                    홍보하고 갯벌이 주는 다양한 가치와 새롭게 주목받고 있는 탄소 흡수원으로서 역할을 알리는 기획 전시를 
+                                    마련하였습니다.
+
+                                    전시명 : 2022 수산과학관 특별기획전 ‘유네스코 세계 자연유선, Getbol!’ - 탄소, 갯벌에 빠지다-<br>
+                                    기간 : 2022. 04. 15(금) ~ 06. 30(목)<br>
+                                    전시내용<br>
+                                    인트로<br>
+                                    -1) 마중나온 갯벌<br>
+                                    -2) 미리보는 갯벌<br>
+                                    2. 본론<br>
+                                    -3) 한국의 갯벌<br>
+                                    -4) 갯벌의 중요성<br>
+                                    -5) 세계 자연유산 갯벌
+                                </p>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--//content-->
+    </div>
+</body>
+<script>
+    $('#datepicker1').datepicker({
+        language: 'ko'
+    });
+    $('#datepicker2').datepicker({
+        language: 'ko'
+    });
+</script>
+</html>
